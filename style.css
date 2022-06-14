@@ -3,6 +3,9 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth; 
+  }
 a{
 	text-decoration: none;
 }
@@ -11,8 +14,7 @@ a{
 	grid-template-columns: 1fr 2fr;
 	margin: 0 auto;
 	width: 100%;
-    grid-template-rows: 1fr 3fr;
-	/*max-width: 950px;*/
+	max-width: 950px;
 	border: solid 1px #494D4D;
 }
 .header {
@@ -118,16 +120,27 @@ p {
 	font-style: italic;
 
 }
-.link a{
+.link a, .nav-item a{
 	color: #000000;
 }
-.link a:hover {
+.link a:hover, .nav-link:hover {
 	text-shadow: #FFFF00 1px 0 5px;
 }
 .project_photo {
 	width:70%;
 	margin: 25px;
 }
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: .3s;
+  }
 @media (max-width: 1024px) {
 	.cv-position {
 		grid-template-columns: minmax(320px, 1fr);
